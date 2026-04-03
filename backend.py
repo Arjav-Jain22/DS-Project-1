@@ -24,7 +24,7 @@ def determine_placement_posterior_probability(input_features):
     with open("likelihood_distribution_params.pkl","rb") as file_handle:
         likelihood_distribution_params = pickle.load(file_handle)
 
-    for input_feat, input_feat_value in zip(config.NEW_INPUT_FEATURES_NAMES, new_input_features):
+    for input_feat, input_feat_value in zip(config.NEW_DATA_INPUT_FEATURES_NAME, new_input_features):
         mu_0, sigma_0 = likelihood_distribution_params[0][input_feat]
         mu_1, sigma_1 = likelihood_distribution_params[1][input_feat]
         
